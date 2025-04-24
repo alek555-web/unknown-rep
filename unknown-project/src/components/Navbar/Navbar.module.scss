@@ -1,0 +1,134 @@
+@use '../../styles/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.Navbar {
+  position: relative;
+  max-width: 100%;
+  background-color: $whitee;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+
+  .NavContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .Logo {
+    background-color: $dark-green;
+    border: 3px solid $dark-green;
+
+    h1 {
+      color: #fff;
+      font-size: 45px;
+      font-weight: 400;
+      margin: 0;
+      font-family: "Roboto";
+      
+      &:hover {
+        cursor: pointer;
+      }
+
+      span {
+        color: $dark-green;
+        background-color: $whitee;
+      }
+    }
+  }
+
+
+  .CategoryButton {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $blackk;
+  }
+
+  .DropDownMenu {
+    width: 200px;
+    height: 6vh;
+    border: 2px solid $blueish;
+    background-color: $calcium;
+    color: $blackk;
+    margin: 1rem;
+    
+    padding: 0.5rem;
+    font-family: "Roboto";
+  }
+
+  .NavLink {
+    text-decoration: none;
+
+    .AnnounceButton {
+      background-color: $blueish;
+      color: #fff;
+      border: none;
+      height: 6vh;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-family: "Roboto";
+      font-size: 13px;
+      width: 150px;
+
+      &:hover {
+        background-color: $dark-green;
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .Icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      width: 32px;
+      height: 32px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $calcium;
+      }
+    }
+  }
+}
+
+// Media queries for responsive design
+@media (max-width: 600px) {
+  .Navbar {
+    padding: 0.5rem;
+  }
+
+  .NavContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .Logo {
+    margin-bottom: 0.5rem;
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  .CategoryButton {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .DropDownMenu {
+    width: 100%;
+  }
+
+  .Icons {
+    margin-top: 0.5rem;
+  }
+}
